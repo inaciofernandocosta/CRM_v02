@@ -1,0 +1,35 @@
+process_customer_data_task:
+  description: >
+    Analisa detalhadamente a base de clientes e faturamento, gerando insights estratégicos.
+  expected_output: >
+    Relatório gerencial detalhado com análises qualitativas e quantitativas.
+  agent: data_analysis_agent
+  inputs:
+    - file_path
+
+analyze_customer_base:
+  description: >
+    Analisa profundamente a base de clientes, identificando padrões e anomalias.
+  expected_output: >
+    Insights sobre a qualidade e completude da base de clientes.
+  agent: data_analysis_agent
+  inputs:
+    - customer_data
+
+analyze_revenue_patterns:
+  description: >
+    Analisa padrões de faturamento, identificando tendências e oportunidades.
+  expected_output: >
+    Insights estratégicos sobre comportamento de faturamento.
+  agent: data_analysis_agent
+  inputs:
+    - revenue_data
+
+generate_strategic_insights:
+  description: >
+    Gera insights estratégicos combinando análises de clientes e faturamento.
+  expected_output: >
+    Recomendações estratégicas baseadas em dados.
+  agent: strategic_agent
+  inputs:
+    - analysis_results
